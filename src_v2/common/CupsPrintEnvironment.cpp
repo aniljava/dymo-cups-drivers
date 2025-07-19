@@ -90,7 +90,7 @@ CCupsPrintEnvironmentForLM::CCupsPrintEnvironmentForLM()
     else if(isBluetooth_)
         timeout_ = 30.0;
     else // USB
-        timeout_ = 2.5;
+        timeout_ = 0.1;
 }
 
 CCupsPrintEnvironmentForLM::~CCupsPrintEnvironmentForLM()

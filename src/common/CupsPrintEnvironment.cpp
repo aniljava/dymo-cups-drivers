@@ -135,8 +135,8 @@ CCupsPrintEnvironmentForLM::ReadData(buffer_t& DataBuffer)
     
   DataBuffer.clear();
 
-  byte buf[16];
-  ssize_t bytesRead = cupsBackChannelRead((char*)buf, sizeof(buf), 2.5);
+  byte buf[256];
+  ssize_t bytesRead = cupsBackChannelRead((char*)buf, sizeof(buf), 0.1);
   if (bytesRead == -1)
     fprintf(stderr, "DEBUG: CCupsPrintEnvironmentForLM::ReadData() unable to read data, errno=%d\n", errno);
   else if (bytesRead == 0)

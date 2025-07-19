@@ -44,7 +44,7 @@ public:
     ERROR_BIT           = 0x80,
   };
     
-  CLabelWriterLanguageMonitor(IPrintEnvironment& Environment, bool UseSleep = true, size_t ReadStatusTimeout = 10);
+  CLabelWriterLanguageMonitor(IPrintEnvironment& Environment, bool UseSleep = true, size_t ReadStatusTimeout = 0.5);
   virtual ~CLabelWriterLanguageMonitor();
     
   virtual void StartDoc();
